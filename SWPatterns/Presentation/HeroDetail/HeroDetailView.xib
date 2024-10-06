@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroDetailViewController" customModule="SWPatterns" customModuleProvider="target">
             <connections>
+                <outlet property="boton" destination="WcN-Xz-zdO" id="q6m-3B-gYd"/>
                 <outlet property="container" destination="UZe-B0-yqN" id="38Z-ve-Pew"/>
                 <outlet property="errorContainer" destination="RnZ-H0-XDV" id="ObB-AF-1Kc"/>
                 <outlet property="errorLabel" destination="NpC-rW-nv5" id="82i-ci-nM1"/>
@@ -46,17 +47,28 @@
                             <rect key="frame" x="0.0" y="0.0" width="361" height="128"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSN-EL-OU7" userLabel="title">
-                            <rect key="frame" x="0.0" y="128" width="361" height="610.66666666666663"/>
+                            <rect key="frame" x="0.0" y="128" width="361" height="550.66666666666663"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZd-wH-8u8" userLabel="Description">
-                            <rect key="frame" x="0.0" y="738.66666666666663" width="361" height="20.333333333333371"/>
+                            <rect key="frame" x="0.0" y="678.66666666666663" width="361" height="20.333333333333371"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcN-Xz-zdO">
+                            <rect key="frame" x="0.0" y="699" width="361" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="fYr-un-chn"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Transformaciones"/>
+                            <connections>
+                                <action selector="didPressTransformations:" destination="-1" eventType="touchUpInside" id="JuN-Qi-JjJ"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
             </subviews>

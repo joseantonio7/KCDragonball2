@@ -11,6 +11,7 @@ class HeroDetailViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var container: UIStackView!
     @IBOutlet weak var errorContainer: UIStackView!
+    @IBOutlet weak var boton: UIButton!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     init(viewModel: HeroDetailViewModel) {
         self.viewModel = viewModel
@@ -29,6 +30,15 @@ class HeroDetailViewController: UIViewController {
 
     
     
+    @IBAction func didPressTransformations(_ sender: Any) {
+
+        guard let hero = viewModel.hero else {
+            boton.isHidden = true
+            return
+        }
+        let transformationsViewController = TransformationsListBuilder().build(identifier: hero.identifier)
+        navigationController?.pushViewController(transformationsViewController, animated: true)
+    }
     // MARK: - States
     private func bind() {
         viewModel.onStateChanged.bind { [weak self] state in
